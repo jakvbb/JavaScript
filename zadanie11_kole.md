@@ -1,6 +1,6 @@
 <html>
 <body bgcolor="#D3D3D3">
-<div style="color:red;font-size:50px;">
+<div style="color:green;font-size:31px;">
 <script language="JavaScript">
 
 var liczba1=prompt("Dzien1=","");
