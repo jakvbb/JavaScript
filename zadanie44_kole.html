@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pętla Jakub Kolendo</title>
+</head>
+<body>
+
+  <h2>Pętla for – Jakub Kolendo</h2>
+
+  <div id="wynik"></div>
+
+  <script>
+    let naz_kol = "Kolendo";
+    let imie_kol = "Jakub";
+    let len_kol = naz_kol.length;
+    let ile_razy_wyswietlic = (len_kol % 4) + 10;
+    let wielkosc_liter = (len_kol % 3) + 40;
+
+    document.getElementById("wynik").innerHTML +=
+      "<p>Ilość wykonania pętli = <b>" + ile_razy_wyswietlic +
+      "</b><br>Wielkość liter = <b>" + wielkosc_liter + "px</b></p>";
+
+    for (let i_kol = 1; i_kol <= ile_razy_wyswietlic; i_kol++) {
+      if (i_kol % 2 == 0) {
+        document.getElementById("wynik").innerHTML +=
+          "<p style='font-size:" + wielkosc_liter + "px'>" + imie_kol + "</p>";
+      } else {
+        document.getElementById("wynik").innerHTML +=
+          "<p style='font-size:" + wielkosc_liter + "px'>" + naz_kol + "</p>";
+      }
+    }
+  </script>
+
+</body>

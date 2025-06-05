@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Sprawdzenie danych Kolendo</title>
+</head>
+<body>
+<div style="color:red; font-size:30px;">
+    <script>
+        let a_kol, b_kol, c_kol;
+        let poprawne = false;
+
+        do {
+            a_kol = parseFloat(prompt("Podaj bok a:", ""));
+            b_kol = parseFloat(prompt("Podaj bok b:", ""));
+            c_kol = parseFloat(prompt("Podaj bok c:", ""));
+
+            if (
+                a_kol > 0 && b_kol > 0 && c_kol > 0 &&
+                a_kol + b_kol > c_kol &&
+                a_kol + c_kol > b_kol &&
+                b_kol + c_kol > a_kol
+            ) {
+                poprawne = true;
+                document.write("Można zbudowac trojkąt.");
+            } else {
+                alert("Z podanych długości nie można zbudować boku, podaj dane ponownie.");
+            }
+        } while (!poprawne);
+    </script>
+</div>
+</body>
+</html>

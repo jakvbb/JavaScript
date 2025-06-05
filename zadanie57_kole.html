@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 - Pierwiastki liczb</title>
+</head>
+<body>
+
+    <h1>Zadanie 57 - Pierwiastki liczb</h1>
+    <p>Numer w dzienniku: <b>12</b></p>
+
+    <div id="wynik"></div>
+
+    <script>
+        function pierwiastki() {
+            var num_kol = 12;
+            var wynikHTML = "<h2>Wynik:</h2>";
+            var licznik_linii = 0;
+
+            for (var i_kol = num_dzien; i_kol <= num_dzien + 15; i_kol++) {
+                var pierw_2_kol = Math.sqrt(i_del);
+                var pierw_4_kol = Math.sqrt(pierw_2_kol);
+
+                wynikHTML += "I=" + i_kol +
+                    " pierw_2(" + i_kol + ")=" + pierw_2_kol.toFixed(2) +
+                    " pierw_4(" + i_kol + ")=" + pierw_4_kol.toFixed(2) + "<br>";
+
+                licznik_linii++;
+
+                if (licznik_linii % 3 == 0) {
+                    wynikHTML += "<hr>";
+                    document.getElementById("wynik").innerHTML = wynikHTML;
+                    var kontynuuj = confirm("Kliknij OK, aby kontynuować...");
+                    if (!kontynuuj) return;
+                }
+            }
+
+            document.getElementById("wynik").innerHTML = wynikHTML;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <head>
+ <title>Sprawdzenie danych Kolendo </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+<div style="color:red;font-size:50px;">
+ <script language="JavaScript">
+ do {
+var liczba1=prompt("wysokość=","");
+ var h_kol=parseFloat(liczba1);
+ }
+ while ( h_kol<=0);
+ do {
+var liczba1=prompt("podstawę=","");
+ var a_kol=parseFloat(liczba1);
+ }
+ while(!( a_kol>0));
+var Pole_kol=a_kol*h_kol/2;
+ document.write("Pole="+Pole_kol.toFixed(2)+" cm^2"+"<br>");
+ </script>
+</div>
+</body>
+</html>
