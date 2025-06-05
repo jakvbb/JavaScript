@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43 - Liczby parzyste</title>
+</head>
+<body>
+
+
+    <input type="button" value="Uruchom program" onclick="wypiszParzyste()" />
+
+    <div id="wynik"></div>
+
+    <script>
+        function wypiszParzyste() {
+            var kon_pet_kol = prompt("Podaj liczbę końcową:", "10");
+
+            kon_pet_kol = parseInt(kon_pet_kol);
+
+            if (isNaN(kon_pet_kol) || kon_pet_kol < 2) {
+                document.getElementById("wynik").innerHTML = "<p>Podano nieprawidłową liczbę.</p>";
+                return;
+            }
+
+            var wynikHTML = "<h2>Wynik:</h2>";
+            for (var i_kol = 2; i_kol <= kon_pet_kol; i_kol++) {
+                if (i_kol % 2 === 0) {
+                    wynikHTML += i_kol + "<br>";
+                }
+            }
+
+            document.getElementById("wynik").innerHTML = wynikHTML;
+        }
+    </script>
+
+</body>
+</html>
